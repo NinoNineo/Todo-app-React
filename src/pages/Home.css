@@ -1,0 +1,298 @@
+.main {
+    width: 100%;
+    height: 960px;
+    background: var(--background-image);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-top: 70px;
+  }
+  
+  .main .m-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+  
+  .main .m-head h1 {
+    color: #fff;
+    font-weight: var(--font-weight-700);
+    font-size: var(--font-size-40px);
+    letter-spacing: var(--letter-spacing-15);
+    font-family: 'josefin';
+  }
+  
+  .moon {
+    background-image: url(../assets/images/icon-moon.svg);
+  }
+  
+  .sun {
+    background-image: url(../assets/images//icon-sun.svg);
+  }
+  
+  .mode-switch {
+    width: 26px;
+    height: 26px;
+    background-repeat: no-repeat;
+  }
+  
+  .display {
+    display: none;
+  }
+  
+  .display-none {
+    display: block;
+  }
+  
+  @media screen and (max-width: 425px) {
+    .main {
+        background: var(--background-small-image);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+  
+    .buttons.display-none {
+        display: none;
+    }
+  
+    .display {
+        display: block;
+        gap: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        padding: 20px 24px;
+        width: 60%;
+    }
+  
+    .filter-container .filter .display-none {
+        display: none;
+    }
+  
+    .filter-container {
+        flex-direction: column;
+    }
+  }
+  
+  @media screen and (max-width: 1440px) {
+    .main .m-head {
+        width: 90%;
+    }
+  
+    .main {
+        height: 200px;
+        padding-top: 40px;
+    }
+  }
+  .task-container
+  {
+      width: 30%;
+      margin: auto;
+  }
+  .task-container .input-container
+  {
+      width: 100%;
+      padding: 20px 24px;
+      background-color: var(--background-color-input);
+      display: flex;
+      box-shadow: var(--gray-clr) 0 35px 50px -15px;
+      border-radius: 6px;
+  }
+  .task-container .input-container input
+  {
+      width: 100%;
+      color: var(--dark-clr);
+      font-weight: var(--font-weight-400);
+      font-size: var(--font-size-18px);
+      background-color: transparent;
+  }
+  .task-container .input-container input::placeholder
+  {
+      color: var(--dark-gray-clr);
+      font-weight: var(--font-weight-400);
+      font-size: var(--font-size-18px);
+  }
+  .task-container .input-container .round
+  {
+      border: 1px solid var(--light-gray-clr);
+      width: 24px;
+      border-radius: 50%;
+      margin-right: 20px;
+  }
+  .task-about
+  {
+      position: relative;
+  }
+  .task-section
+  {
+      width: 30%;
+      background-color: var(--background-color-input);
+      margin: auto;
+      margin-top: 24px;
+      border-radius: 6px;
+      height: 400px;
+      overflow-y: scroll;
+      box-shadow: 0 35px 50px -15px hsla(0, 0%, 0%, 0.5);
+      position: relative;
+  }
+  .task-section::-webkit-scrollbar
+  {
+      width: 2px;
+      display: block;
+  }
+  .task-section li
+  {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border-clr);
+  }
+  .task-section input
+  {
+      margin-right: 24px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 1px solid var(--light-gray-clr);
+  }
+  .task-section .task
+  {
+      display: flex;
+      align-items: center;
+  }
+  input[type="checkbox"]
+  {
+      appearance: none;
+      width: 24px;
+      accent-color: var(--background-color-input);
+      height: 24px;
+      border-radius: 50%;
+      border: 1px solid var(--light-gray-clr);
+      cursor: pointer;
+  }
+  input[type="checkbox"]:checked
+  {
+      background: linear-gradient(to right bottom, #55DDFF, #C058F3);
+      border-color: var(--light-gray-clr);
+      accent-color: var(--background-color-input);
+      position: relative;
+  }
+  input[type="checkbox"]:checked::before
+  {
+      content: url(../assets/images/icon-check.svg);
+      font-size: 18px;
+      color: var(--background-color-input);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+  .filter-container
+  {
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .filter-container .filter .buttons
+  {
+      gap: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .filter-container .filter .buttons button:hover,
+  .clear:hover
+  {
+      color: var(--button-clr);
+      transition: 0.3s;
+  }
+  .filter-container .filter
+  {
+      width: 30%;
+      padding: 20px 24px;
+      border-top: 1px solid var(--border-clr);
+      background-color: var(--background-color-input);
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      color: #9495a5;
+  }
+  .filter-container .buttons button
+  {
+      font-weight: var(--font-weight-700);
+      color: #9495A5;
+      transition: 0.3s;
+  }
+  .filter-container button
+  {
+      color: #9495a5;
+  }
+  .drag-drop
+  {
+      text-align: center;
+      margin-top: 50px;
+      color: #9495A5;
+  }
+  ul li
+  {
+      color: var(--li-clr);
+      font-size: var(--font-size-18px);
+  }
+  .no-items
+  {
+      color: #9495a5;
+      font-size: 20px;
+      margin-left: 20px;
+      margin-top: 24px;
+  }
+  .delete
+  { 
+      position: absolute;
+      right: 24px;
+      width: 18px;
+      height: 18px;
+      visibility: hidden;
+      background: url(../assets/images/icon-cross.svg);
+  }
+  ul li:hover
+  {
+      cursor: pointer;
+  }
+  ul li:hover .delete
+  {
+      visibility: visible;
+  }
+  .display
+  {
+      display: none;
+      width: 90%;
+      background: var(--background-color-input);
+  }
+  @media screen and (max-width: 1440px)
+  {
+      .task-container,
+      .task-section
+      {
+          width: 90%;
+      }
+      .filter-container .filter
+      {
+          width: 90%;
+      }
+      .display-none
+      {
+          display: none;
+      }
+      .display
+      {
+          display: block;
+      }
+  }

@@ -1,0 +1,58 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  border: none;
+  outline: none;
+}
+body
+{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--background-color);
+}
+@font-face {
+  font-family: 'josefin';
+  src: url(./assets/fonts/Bellefair\,Josefin_Sans/Josefin_Sans/JosefinSans-VariableFont_wght.ttf);
+}
+:root
+{
+  --background-color-input: #fff;
+  --light-gray-clr: #E3E4F1;
+  --gray-clr: #C2C3D6;
+  --li-clr: #494C6B;
+  --dark-gray-clr: #9495A5;
+  --dark-clr: #393A4B;
+  --blue-clr: #3A7CFD;
+  --background-color-light: #fafafa;
+  --background-color-dark: #171823;
+  --font-weight-700: 700;
+  --font-weight-400: 400;
+  --font-size-40px: 40px;
+  --font-size-18px: 18px;
+  --letter-spacing-15: 15px;
+  --border-clr: #E3E4F1;
+  --background-color: var(--background-color-light);
+  --background-image: var(--background-image-light);
+  --background-small-image: var(--background-small-image-light);
+  --background-small-image-light: url(./assets/images/bg-mobile-light.jpg);
+  --background-small-image-dark: url(./assets/images/bg-mobile-dark.jpg);
+  --background-image-light: url(./assets/images/bg-desktop-light.jpg);
+  --background-image-dark: url(./assets/images/bg-desktop-dark.jpg);
+  --button-clr: #494C6B;
+}
+[data-mode="dark"]
+{
+  --background-color-input: #25273D;
+  --li-clr: #C8CBE7;
+  --border-clr: #393A4B;
+  --button-clr: #E3E4F1;
+}
+button
+{
+  background-color: transparent;
+}
